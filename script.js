@@ -25,7 +25,7 @@ function calculateAge() {
     }
 
     if (document.getElementById("dateSelection").value === "") {
-    window.alert = "Please enter your DOB!!!";
+    document.getElementById("result").innerHTML = "Please enter your DOB!!!";
     } else {
     // Updates the Virtual DOM:
     document.getElementById("result").innerHTML = `Your age is ${years} years, ${months} months, ${days} days`;
