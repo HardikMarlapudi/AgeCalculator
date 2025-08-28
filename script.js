@@ -32,3 +32,9 @@ function calculateAge() {
     return;
     }
 }
+
+function reset() {
+    // Resets the current output
+    document.getElementById("result").innerHTML = "";
+    return;
+}
