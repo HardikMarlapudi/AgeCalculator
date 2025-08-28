@@ -35,6 +35,7 @@ function calculateAge() {
 
 function reset() {
     // Resets the current output
+    document.getElementById("dateSelection").value `${`mm/dd/yyyy`}`;
     document.getElementById("result").innerHTML = "";
     return;
 }
