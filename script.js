@@ -3,6 +3,7 @@ function calculateAge() {
     const birthDate = new Date(document.getElementById("dateSelection").value);
     const today = new Date();
 
+    // How the years, months, and days gets calculated
     let years = today.getFullYear() - birthDate.getFullYear();
     let months = today.getMonth() - birthDate.getMonth();
     let days = today.getDate() - birthDate.getDate();
@@ -26,8 +27,8 @@ function calculateAge() {
 
     if (document.getElementById("dateSelection").value === "") {
     document.getElementById("result").innerHTML = "Please enter your DOB!!!";
+    return;
     } else {
-    // Updates the Virtual DOM:
     document.getElementById("result").innerHTML = `Your age is ${years} years, ${months} months, ${days} days`;
     return;
     }
@@ -35,7 +36,6 @@ function calculateAge() {
 
 function reset() {
     // Resets the current output
-    document.getElementById("dateSelection").value `${`mm/dd/yyyy`}`;
     document.getElementById("result").innerHTML = "";
     return;
 }
