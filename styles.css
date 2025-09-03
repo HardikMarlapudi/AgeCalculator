@@ -8,10 +8,8 @@
 .border {
     display: block;
     text-align: center;
-    position: auto;
- 
     border: 0.5rem solid;
-    border-radius: 5rem solid;
+    border-radius: 0.5rem;
 }
 
 #dateSelection {
