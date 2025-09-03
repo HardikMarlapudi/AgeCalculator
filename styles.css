@@ -9,9 +9,9 @@
     display: block;
     text-align: center;
     position: auto;
-    padding: 25px 40px;
+ 
     border: 0.5rem solid;
-    border-radius: 2rem solid;
+    border-radius: 5rem solid;
 }
 
 #dateSelection {
