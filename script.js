@@ -1,6 +1,7 @@
 function calculateAge() {
+    const birthDateInput = document.getElementById("dateSelection").value;
 
-    const birthDate = new Date(document.getElementById("dateSelection").value);
+    const birthDate = new Date(birthDateInput);
     const today = new Date();
 
     // How the years, months, and days get calculated.
@@ -10,8 +11,8 @@ function calculateAge() {
 
     if (days < 0) {
         months--;
-       const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-       days += prevMonth.getDate();
+        const prevMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+        days += prevMonth.getDate();
     }
 
     if (months < 0) {
@@ -19,12 +20,12 @@ function calculateAge() {
         months += 12;
     }
 
-    if (document.getElementById("dateSelection").value === "") {
-    document.getElementById("result").innerHTML = "Please enter your DOB!!!";
-    return;
+    if (birthDateInput === "") {
+        document.getElementById("result").innerHTML = "Please enter your DOB!!!";
+        return;
     } else {
-    document.getElementById("result").innerHTML = `Your age is ${years} years, ${months} months, ${days} days.`;
-    return;
+        document.getElementById("result").innerHTML = `Your age is ${years} years, ${months} months, ${days} days.`;
+        return;
     }
 }
 
